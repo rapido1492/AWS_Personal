@@ -1,0 +1,2 @@
+com/lch/admin/springboot/HelloControllerTest.java
+ com.lch.admin.springboot.HelloControllerTest
