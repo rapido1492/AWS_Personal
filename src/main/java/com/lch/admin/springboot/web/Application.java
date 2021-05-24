@@ -1,4 +1,4 @@
-package com.lch.admin.springboot;
+package com.lch.admin.springboot.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
