@@ -1,5 +1,6 @@
 package com.lch.admin.springboot.web.web;
 
+import com.lch.admin.springboot.web.config.auth.LoginUser;
 import com.lch.admin.springboot.web.config.auth.dto.SessionUser;
 import com.lch.admin.springboot.web.service.posts.PostsService;
 import com.lch.admin.springboot.web.web.dto.PostsResponseDto;
@@ -19,10 +20,8 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
-
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if(user != null){
             model.addAttribute("userName", user.getName());
